@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"Hoodies & Sweetshirt",
+        "image":"./assets/img-12.jpg",
+        "category":"women"
+    },
+    {
+        "id":2,
+        "name":"Coats & Parkas",
+        "image":"./assets/img-13.jpg",
+        "category":"women"
+    },
+    {
+        "id":3,
+        "name":"Tees & T-Shirt",
+        "image":"./assets/img-14.jpg",
+        "category":"women"
+    },
+    {
+        "id":4,
+        "name":"Boxers",
+        "image":"./assets/img-15.jpg",
+        "category":"women"
+    }
+]

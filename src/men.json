@@ -1,0 +1,58 @@
+[
+    {
+        "id":1,
+        "name":"Shirts",
+        "image":"./assets/img-5.jpg",
+        "category":"men"
+
+    },
+    {
+        "id":2,
+        "name":"Printed T-Shirts",
+        "image":"./assets/img-6.jpg",
+        "category":"men"
+
+    },
+    {
+        "id":3,
+        "name":"Plain T-Shirt",
+        "image":"./assets/img-7.jpg",
+        "category":"men"
+
+    },
+    {
+        "id":4,
+        "name":"Polo T-Shirt",
+        "image":"./assets/img-8.jpg",
+        "category":"men"
+
+    },
+    {
+        "id":5,
+        "name":"Hoodies & Sweetshirt",
+        "image":"./assets/img-9.jpg",
+        "category":"men"
+
+    },
+    {
+        "id":6,
+        "name":"Jeans",
+        "image":"./assets/img-10.jpg",
+        "category":"men"
+
+    },
+    {
+        "id":7,
+        "name":"Activewear",
+        "image":"./assets/img-1.jpg",
+        "category":"men"
+
+    },
+    {
+        "id":8,
+        "name":"Boxers",
+        "image":"./assets/img-11.jpg",
+        "category":"men"
+
+    }
+]

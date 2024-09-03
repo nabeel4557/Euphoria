@@ -1,0 +1,29 @@
+[
+    {
+        "id":1,
+        "name" :"Knitted Joggers",
+        "image": "/assets/img-1.jpg",
+        "category": "New Arrival"
+    },
+    {
+        "id":2,
+        "name" :"Urban Shirts",
+        "image": "/assets/img-2.jpg",
+        "category": "New Arrival"
+    },
+    {
+        "id":3,
+        "name" :"Full Sleeve",
+        "image": "/assets/img-3.jpg",
+        "category": "New Arrival"
+    },
+    {
+        "id":4,
+        "name" :"Active T-Shirts",
+        "image": "/assets/img-4.jpg",
+        "category": "New Arrival"
+    }
+
+
+   
+]
