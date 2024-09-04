@@ -2,7 +2,7 @@ import React from 'react';
 
 function Ad() {
     return (
-        <div className='wrapper flex pt-20 pb-12 w-full space-x-8'>
+        <div className='wrapper flex pt-20 pb-[70px] w-full space-x-8 '>
             <div className='w-1/2 h-[350px] bg-cover bg-no-repeat rounded-xl' 
                  style={{backgroundImage: `url(/assets/bg-2.jpg)`, backgroundSize: '150%', backgroundPosition: 'left top'}}>
                 <div className="px-6 pt-20 text-white font-causten items-center">

@@ -22,4 +22,24 @@
     height: auto;
     display: block;
   }
+  .image-container {
+    width: 300px; /* Set the desired width */
+    height: 300px; /* Set the desired height */
+    /* margin: 0 auto; Center the container */
+    overflow: hidden; /* Ensure no overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+ 
+  
+  
   
