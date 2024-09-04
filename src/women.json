@@ -2,24 +2,28 @@
     {
         "id":1,
         "name":"Hoodies & Sweetshirt",
+        "name2":"Hoodies & Sweetshirt Women's Cotton Hooded",
         "image":"./assets/img-12.jpg",
         "category":"women"
     },
     {
         "id":2,
         "name":"Coats & Parkas",
+        "name2":"Coats & Parkas Karori Women Solid Parka Jacket",
         "image":"./assets/img-13.jpg",
         "category":"women"
     },
     {
         "id":3,
         "name":"Tees & T-Shirt",
+        "name2":"Tees & T-Shirt Enamor Women's Slim Fit T-Shirt",
         "image":"./assets/img-14.jpg",
         "category":"women"
     },
     {
         "id":4,
         "name":"Boxers",
+        "name2":"Boxers Hangout Hub Women’s Cotton Shorts | Boxer Half pant with Sporty Stripe",
         "image":"./assets/img-15.jpg",
         "category":"women"
     }

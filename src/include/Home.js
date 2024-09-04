@@ -8,6 +8,8 @@ import Mens from '../components/Mens';
 import Brands from '../components/Brands';
 import Feedback from '../components/Feedback';
 import Women from '../components/Women';
+import Footer from '../components/Footer';
+import Limelight from '../components/Limelight';
 
 function Home() {
   return (
@@ -20,7 +22,9 @@ function Home() {
         <Mens/>
         <Women/>
         <Brands/>
+        <Limelight/>
         <Feedback/>
+        <Footer/>
     </div>
   )
 }

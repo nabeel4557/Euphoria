@@ -1,5 +1,28 @@
 
+.slick-slide {
+    padding: 0; 
+  }
+  
+  .slick-list {
+    margin: 0 -5px;
 
+  }
+  
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  
+  .slick-slide > div {
+    margin: 0 5px; 
+  }
+  
+  
+  .slick-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .image-container {
     width: 100%; /* Set the desired width */
     height: 300px; /* Set the desired height */
@@ -17,6 +40,36 @@
     height: auto;
     display: block;
   }
+
+
+  /* slick slide// */
+
+  .slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider-wrapper {
+    width: calc(100% - 80px);
+}
+
+.Arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.PrevArrow {
+    left: 0;
+    margin-left: 10px;
+}
+
+.NextArrow {
+    right: 0;
+    margin-right: 10px;
+}
  
   
   
