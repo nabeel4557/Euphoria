@@ -4,7 +4,7 @@ import Button from '../include/Button'
 function Ad2() {
     return (
         <>
-            <div className='wrapper w-full flex py-5'>
+            <div className='wrapper w-full flex py-[40px]'>
                 <div className='w-1/2 bg-cover bg-no-repeat' style={{backgroundImage: `url(/assets/bg-4.jpg)`}}>
                     <div className="px-20 text-white font-causten flex flex-col justify-center h-full">
                         <h2 className='text-[34px] font-bold leading-[45px] mt-5 mb-2'>WE MADE YOUR EVERYDAY FASHION BETTER!</h2>

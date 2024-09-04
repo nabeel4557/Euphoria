@@ -1,7 +1,7 @@
 import React from 'react'
-import Men from '../men.json'
+import Men from '../women.json'
 
-function Mens() {
+function Women() {
   return (
     <div className='wrapper pb-[40px]'>
         
@@ -35,4 +35,4 @@ function Mens() {
   )
 }
 
-export default Mens
+export default Women

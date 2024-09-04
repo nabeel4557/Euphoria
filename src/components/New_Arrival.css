@@ -1,29 +1,7 @@
 
-.slick-slide {
-    padding: 0; 
-  }
-  
-  .slick-list {
-    margin: 0 -5px; 
-  }
-  
-  .slick-track {
-    display: flex;
-    align-items: center;
-  }
-  
-  .slick-slide > div {
-    margin: 0 5px; 
-  }
-  
-  
-  .slick-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+
   .image-container {
-    width: 300px; /* Set the desired width */
+    width: 100%; /* Set the desired width */
     height: 300px; /* Set the desired height */
     /* margin: 0 auto; Center the container */
     overflow: hidden; /* Ensure no overflow */

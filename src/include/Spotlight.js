@@ -19,7 +19,7 @@ function Spotlight() {
 
     return (
         <>
-            <div className='h-[550px] bg-cover bg-center relative' style={{ backgroundImage: `url(${currentBg})` }}>
+            <div className='h-[750px] bg-cover bg-center relative' style={{ backgroundImage: `url(${currentBg})` }}>
                 <div className='flex justify-between items-center h-full px-6'>
                     <img src={leftarrow} alt="Left Arrow" onClick={handlePrev} className="cursor-pointer" />
                     <img src={rightarrow} alt="Right Arrow" onClick={handleNext} className="cursor-pointer" />

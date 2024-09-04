@@ -30,7 +30,7 @@ function New_Arrival() {
         <div className='bg-[#8A33FD] w-[6px] h-[30px]'></div>
         <h3 className='text-[28px] font-bold'>New Arrival</h3>
       </div>
-      <div className=' items-center  '>
+      <div className=' items-center '>
         <PrevArrow onClick={() => sliderRef.current.slickPrev()} />
             <div className='p-3 mb-[50px] '>
 

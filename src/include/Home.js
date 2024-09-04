@@ -7,6 +7,7 @@ import Ad2 from '../components/Ad2';
 import Mens from '../components/Mens';
 import Brands from '../components/Brands';
 import Feedback from '../components/Feedback';
+import Women from '../components/Women';
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
         <New_Arrival/>
         <Ad2/>
         <Mens/>
+        <Women/>
         <Brands/>
         <Feedback/>
     </div>
