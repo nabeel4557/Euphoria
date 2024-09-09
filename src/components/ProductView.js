@@ -5,16 +5,26 @@ import { IoStar, IoStarHalf, IoStarOutline } from "react-icons/io5";
 import styled from 'styled-components';
 import { BiCommentDetail } from "react-icons/bi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { MdOutlinePayment } from "react-icons/md";
+import { IoShirtOutline } from "react-icons/io5";
+import { MdOutlineLocalShipping } from "react-icons/md";
+import { IoIosArrowForward } from "react-icons/io";
 
 function ProductView() {
     const { id } = useParams();
     const product = Men.find((item) => item.id === parseInt(id));
 
     const [selectedSize, setSelectedSize] = useState(null);
+    const [selectedColor, setSelectedColor] = useState(null);
 
     const handleSizeClick = (size) => {
       setSelectedSize(size);
-  };
+
+    };
+    const handleColorClick = (color) => {
+      setSelectedColor(color);
+    }
 
     return (
         <Product className='product'>
@@ -24,6 +34,11 @@ function ProductView() {
                 </ImageContainer>
             </ProductLeft>
             <ProductRight className='right'>
+              <ShopDetails>
+                <Choice>Shop<IoIosArrowForward/></Choice>
+                <Choice>Women<IoIosArrowForward/></Choice>
+                <Choice>Top</Choice>
+              </ShopDetails>
                 <Details className='details'>
                     <Heading>{product.name2}</Heading>
                     <Rating className='rating'>
@@ -57,16 +72,30 @@ function ProductView() {
                         
                       </SelectSize>
                     </SizeDiv>
-                    <div>
-                      <h5>Colours Available </h5>
-                      <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-
-                    </div>
+                    <ColorAvailable>
+                      <ColorHeading>Colours Available </ColorHeading>
+                      <ColorDiv>
+                        <Color style={{"background-color" : '#3C4242'}} isSelected={selectedColor === '#3C4242'} onClick={()=> handleColorClick('#3C4242')}></Color>
+                        <Color style={{"background-color" : '#EDD146'}} isSelected={selectedColor === '#EDD146'} onClick={()=> handleColorClick('#EDD146')}></Color>
+                        <Color style={{"background-color" : '#EB84B0'}} isSelected={selectedColor === '#EB84B0'} onClick={()=> handleColorClick('#EB84B0')}></Color>
+                        <Color style={{"background-color" : '#9C1F35'}} isSelected={selectedColor === '#9C1F35'} onClick={()=> handleColorClick('#9C1F35')}></Color>
+                      </ColorDiv>
+                    </ColorAvailable>
+                    <PriceDetails>
+                      <Button> <MdOutlineShoppingCart/> Add to cart</Button>
+                      <Price> {product.price}</Price>
+                    </PriceDetails>
+                    <DeliveryDetails>
+                      <LeftSide className='left'>
+                        <Delivery><DeliveryIcon><MdOutlinePayment/></DeliveryIcon>Secure payment</Delivery>
+                        <Delivery><DeliveryIcon><MdOutlineLocalShipping/></DeliveryIcon>Free shipping</Delivery>
+                      </LeftSide>
+                      <RightSide className='right'>
+                        <Delivery><DeliveryIcon><IoShirtOutline/></DeliveryIcon>Size & Fit</Delivery>
+                        <Delivery><DeliveryIcon><img src='/assets/Free-Shipping&Returns.svg'alt='return'/></DeliveryIcon>Free Shipping & Returns</Delivery>
+                      </RightSide>
+                      
+                    </DeliveryDetails>
                    
                 </Details>
             </ProductRight>
@@ -80,6 +109,7 @@ const Product = styled.div`
 `;
 const ProductLeft = styled.div`
   width: 50%;
+  background-color:#F6F6F6;
 `;
 const ImageContainer = styled.div`
   width: 520px;
@@ -94,7 +124,7 @@ const ProductRight = styled.div`
 
 `;
 const Details = styled.div`
-  width: 400px;
+  width: 550px;
 `
 const Heading = styled.h1`
   font-weight: 700;
@@ -172,7 +202,99 @@ const SizeBox = styled.span`
   color: ${({ isSelected }) => (isSelected ? 'white' : '#3C4242')};
   
 `
-const
-
-
+const ColorAvailable = styled.div`
+  margin-top: 30px;
+`
+const ColorHeading = styled.h5`
+font-weight:bold;
+font-size: 18px;
+`
+const ColorDiv = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+`
+const Color = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: ${({ isSelected }) => (isSelected ? '2px solid #000' : 'none')}; 
+  cursor: pointer;
+  padding: ${({ isSelected }) => (isSelected ? '2px' : '0')};
+  background-color: ${({ color }) => color}; 
+  box-sizing: border-box;
+`
+const PriceDetails = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+  border-bottom:1px solid #BEBCBD;
+  padding-bottom:40px
+`
+const Button = styled.button`
+ border-radius: 8px;
+ padding: 12px 40px 12px 40px;
+ background-color: #8A33FD;
+ color: #fff;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ font-size:18px
+`
+const Price = styled.div`
+  border: 1px solid #3C4242;
+  padding: 12px 40px 12px 40px;
+  border-radius: 8px;
+  font-weight:700;
+  font-size:18px
+`
+const DeliveryDetails = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  
+`
+const LeftSide = styled.div`
+  width: 50%;
+`
+const Delivery = styled.div`
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  color: #3C4242;
+  font-weight:500;
+  margin-top: 20px;
+  
+`
+const RightSide = styled.div`
+`
+const DeliveryIcon = styled.span`
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 18px;
+  color: #3C4242;
+  background-color:#F6F6F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ `
+ const ShopDetails = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom:30px
+ `
+ const Choice = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #807D7E;
+ `
 export default ProductView;
