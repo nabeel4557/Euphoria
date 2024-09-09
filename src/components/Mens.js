@@ -1,5 +1,7 @@
 import React from 'react'
 import Men from '../men.json'
+import { Link } from 'react-router-dom'
+
 
 function Mens() {
   return (
@@ -11,6 +13,7 @@ function Mens() {
       </div>
             <div className='grid grid-cols-4 w-full'>
               {Men.map((item)=> (
+                <Link to={ `/products/${item.id}`}>
                   <div className='mb-10'>
                     <div className='w-[271px] h-[393px]'>
                       <img className='w-[100%] h-[100%]' src={item.image} alt={item.name}/>
@@ -27,6 +30,7 @@ function Mens() {
                       </div>
                     </div>
                   </div>
+                </Link>
 
               ))}
             </div>

@@ -3,64 +3,246 @@
         "id":1,
         "name":"Shirts",
         "name2":"IndoPrimo Men's Cotton Casual Regular Fit red Checks Shirt for Men Full Sleeves - Harley",
-        "image":"./assets/img-5.jpg",
-        "category":"men"
+        "image":"/assets/img-5.jpg",
+        "category":"men",
+        "brand": "polo",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/71aUHfC2t7L._SX679_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/71An-D0DZoL._SX679_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/71yRhbV4ZhL._SX679_.jpg"
+            }
+            
+        ]
 
     },
     {
         "id":2,
         "name":"Printed T-Shirts",
         "name2":"BHOKALS Adventure Printed Round Neck Cotton Men T-Shirt",
-        "image":"./assets/img-6.jpg",
-        "category":"men"
+        "image":"/assets/img-6.jpg",
+        "category":"men",
+        "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/619uXd9I3iL._SX679_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/41d02UDD+FL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/41qzAijJHRL._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+
+        ]
+        
 
     },
     {
         "id":3,
         "name":"Plain T-Shirt",
         "name2":"Van Heusen Men's Regular Fit T-Shirt",
-        "image":"./assets/img-7.jpg",
-        "category":"men"
+        "image":"/assets/img-7.jpg",
+        "category":"men",
+        "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/41hqM1P+-SL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/51-VMw-53aL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/51bU2QcuIxL._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
 
     },
     {
         "id":4,
         "name":"Polo T-Shirt",
         "name2":"XYXX Men's Regular Fit Polo Shirt",
-        "image":"./assets/img-8.jpg",
-        "category":"men"
+        "image":"/assets/img-8.jpg",
+        "category":"men",
+         "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/31I80jMir0L._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/31YceXHEO1L._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/313LhLVv7sL._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
+
 
     },
     {
         "id":5,
         "name":"Hoodies & Sweetshirt",
         "name2":"ADRO Hoodies for Men | Printed Hoodie for Men | Cotton Hoodie | Mens Hoodies | Sweatshirt for Men | Hooded Hoodie",
-        "image":"./assets/img-9.jpg",
-        "category":"men"
+        "image":"/assets/img-9.jpg",
+        "category":"men",
+        "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/41fE79nsjxL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/41MAbwYkrjL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/41F4DYIokJL._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
+
+        
 
     },
     {
         "id":6,
         "name":"Jeans",
         "name2":"Levi's Men's 511 Slim Fit Mid Rise Jeans",
-        "image":"./assets/img-10.jpg",
-        "category":"men"
+        "image":"/assets/img-10.jpg",
+        "category":"men",
+        "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/41rNh64SetL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/41z0c6k7pLL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/4159OphwPEL._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
 
     },
     {
         "id":7,
         "name":"Activewear",
         "name2":"Jockey IM21 Men's Super Combed Supima Cotton Solid Round Neck Half Sleeve T-Shirt",
-        "image":"./assets/img-1.jpg",
-        "category":"men"
+        "image":"/assets/img-1.jpg",
+        "category":"men",
+        "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/31TB64F9zHL._SS100_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/41TgAM1lbnL._SS100_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/41fTupAFXRL._SS100_.jpg"
+            }
+        ]
 
     },
     {
         "id":8,
         "name":"Boxers",
         "name2":"Jockey 1222 Men's Super Combed Mercerized Cotton Woven Checkered Boxer Shorts with Back Pocket (Colors & Checks May Vary)",
-        "image":"./assets/img-11.jpg",
-        "category":"men"
+        "image":"/assets/img-11.jpg",
+        "category":"men",
+        "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/519PfNM-XIL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/519PfNM-XIL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/41Q5CMrxoQL._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
 
     }
 ]
