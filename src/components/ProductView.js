@@ -10,6 +10,8 @@ import { MdOutlinePayment } from "react-icons/md";
 import { IoShirtOutline } from "react-icons/io5";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
+import VerticalSlider from './VerticalSlider';
+import ProductDiscribtion from './ProductDiscribtion';
 
 function ProductView() {
     const { id } = useParams();
@@ -27,89 +29,104 @@ function ProductView() {
     }
 
     return (
-        <Product className='product'>
-            <ProductLeft className='left'>
-                <ImageContainer className='image-container'>
-                    <Image src={product.image} alt={product.name} />
-                </ImageContainer>
-            </ProductLeft>
-            <ProductRight className='right'>
-              <ShopDetails>
-                <Choice>Shop<IoIosArrowForward/></Choice>
-                <Choice>Women<IoIosArrowForward/></Choice>
-                <Choice>Top</Choice>
-              </ShopDetails>
-                <Details className='details'>
-                    <Heading>{product.name2}</Heading>
-                    <Rating className='rating'>
-                        <Star>
-                            <IoStar color={"#EDD146"} size={22}/>
-                            <IoStar color={"#EDD146"} size={22} />
-                            <IoStar color={"#EDD146"} size={22}/>
-                            <IoStarHalf color={"#EDD146"} size={22} />
-                            <IoStarOutline color={"#EDD146"} size={22}/>
-                            <RatingNamberDiv>
-                              <RatingNumber>3.5</RatingNumber>
-                            </RatingNamberDiv>
-                        </Star>
-                        <ComentDiv>
-                          <CommentIcon><BiCommentDetail size={21} color={"#807D7E;"}/></CommentIcon>
-                          <Comment>120 comment</Comment>
-                        </ComentDiv>
-                    </Rating>
-                    <SizeDiv>
-                      <Size>
-                        <SizeText>Select Size</SizeText>
-                        <SizeGuide>Size Guide <FaArrowRightLong/></SizeGuide>
-                      </Size>
+        <Product className='product wrapper'>
+            <ProductContainer className='product-container'>
+                <ProductLeft className='left'>
+                    <VerticalSlider />
+                    <ImageContainer className='image-container'>
+                        <Image src={product.image} alt={product.name} />
+                    </ImageContainer>
+                </ProductLeft>
+                <ProductRight className='right'>
+                <ShopDetails>
+                    <Choice>Shop<IoIosArrowForward/></Choice>
+                    <Choice>Women<IoIosArrowForward/></Choice>
+                    <Choice>Top</Choice>
+                </ShopDetails>
+                    <Details className='details'>
+                        <Heading>{product.name2}</Heading>
+                        <Rating className='rating'>
+                            <Star>
+                                <IoStar color={"#EDD146"} size={22}/>
+                                <IoStar color={"#EDD146"} size={22} />
+                                <IoStar color={"#EDD146"} size={22}/>
+                                <IoStarHalf color={"#EDD146"} size={22} />
+                                <IoStarOutline color={"#EDD146"} size={22}/>
+                                <RatingNamberDiv>
+                                <RatingNumber>3.5</RatingNumber>
+                                </RatingNamberDiv>
+                            </Star>
+                            <ComentDiv>
+                                <CommentIcon><BiCommentDetail size={21} color={"#807D7E;"}/></CommentIcon>
+                                <Comment>120 comment</Comment>
+                            </ComentDiv>
+                        </Rating>
+                        <SizeDiv>
+                        <Size>
+                            <SizeText>Select Size</SizeText>
+                            <SizeGuide>Size Guide <FaArrowRightLong/></SizeGuide>
+                        </Size>
 
-                      <SelectSize>
-                        {product.size.map((size)=> (
-                          <SizeBox key={size} onClick={()=> handleSizeClick(size)} isSelected = {selectedSize === size}>
-                            {size}
-                          </SizeBox>
-                        ))}
+                            <SelectSize>
+                                {product.size.map((size)=> (
+                                <SizeBox key={size} onClick={()=> handleSizeClick(size)} isSelected = {selectedSize === size}>
+                                    {size}
+                                </SizeBox>
+                                ))}
+                                
+                            </SelectSize>
+                        </SizeDiv>
+                        <ColorAvailable>
+                            <ColorHeading>Colours Available </ColorHeading>
+                            <ColorDiv>
+                                <Color style={{"background-color" : '#3C4242'}} isSelected={selectedColor === '#3C4242'} onClick={()=> handleColorClick('#3C4242')}></Color>
+                                <Color style={{"background-color" : '#EDD146'}} isSelected={selectedColor === '#EDD146'} onClick={()=> handleColorClick('#EDD146')}></Color>
+                                <Color style={{"background-color" : '#EB84B0'}} isSelected={selectedColor === '#EB84B0'} onClick={()=> handleColorClick('#EB84B0')}></Color>
+                                <Color style={{"background-color" : '#9C1F35'}} isSelected={selectedColor === '#9C1F35'} onClick={()=> handleColorClick('#9C1F35')}></Color>
+                            </ColorDiv>
+                        </ColorAvailable>
+                        <PriceDetails>
+                            <Button> <MdOutlineShoppingCart/> Add to cart</Button>
+                            <Price> {product.price}</Price>
+                        </PriceDetails>
+                        <DeliveryDetails>
+                            <LeftSide className='left'>
+                                <Delivery><DeliveryIcon><MdOutlinePayment/></DeliveryIcon>Secure payment</Delivery>
+                                <Delivery><DeliveryIcon><MdOutlineLocalShipping/></DeliveryIcon>Free shipping</Delivery>
+                            </LeftSide>
+                            <RightSide className='right'>
+                                <Delivery><DeliveryIcon><IoShirtOutline/></DeliveryIcon>Size & Fit</Delivery>
+                                <Delivery><DeliveryIcon><img src='/assets/Free-Shipping&Returns.svg'alt='return'/></DeliveryIcon>Free Shipping & Returns</Delivery>
+                            </RightSide>
                         
-                      </SelectSize>
-                    </SizeDiv>
-                    <ColorAvailable>
-                      <ColorHeading>Colours Available </ColorHeading>
-                      <ColorDiv>
-                        <Color style={{"background-color" : '#3C4242'}} isSelected={selectedColor === '#3C4242'} onClick={()=> handleColorClick('#3C4242')}></Color>
-                        <Color style={{"background-color" : '#EDD146'}} isSelected={selectedColor === '#EDD146'} onClick={()=> handleColorClick('#EDD146')}></Color>
-                        <Color style={{"background-color" : '#EB84B0'}} isSelected={selectedColor === '#EB84B0'} onClick={()=> handleColorClick('#EB84B0')}></Color>
-                        <Color style={{"background-color" : '#9C1F35'}} isSelected={selectedColor === '#9C1F35'} onClick={()=> handleColorClick('#9C1F35')}></Color>
-                      </ColorDiv>
-                    </ColorAvailable>
-                    <PriceDetails>
-                      <Button> <MdOutlineShoppingCart/> Add to cart</Button>
-                      <Price> {product.price}</Price>
-                    </PriceDetails>
-                    <DeliveryDetails>
-                      <LeftSide className='left'>
-                        <Delivery><DeliveryIcon><MdOutlinePayment/></DeliveryIcon>Secure payment</Delivery>
-                        <Delivery><DeliveryIcon><MdOutlineLocalShipping/></DeliveryIcon>Free shipping</Delivery>
-                      </LeftSide>
-                      <RightSide className='right'>
-                        <Delivery><DeliveryIcon><IoShirtOutline/></DeliveryIcon>Size & Fit</Delivery>
-                        <Delivery><DeliveryIcon><img src='/assets/Free-Shipping&Returns.svg'alt='return'/></DeliveryIcon>Free Shipping & Returns</Delivery>
-                      </RightSide>
-                      
-                    </DeliveryDetails>
-                   
-                </Details>
-            </ProductRight>
+                        </DeliveryDetails>
+                    
+                    </Details>
+                </ProductRight>
+
+            </ProductContainer>
+            
+
+            <div>
+              <ProductDiscribtion/>
+            </div>
         </Product>
+        
     );
 }
 
 const Product = styled.div`
-  display: flex;
   width: 100%;
 `;
+const ProductContainer = styled.div`
+    display: flex;
+    align-items: center;
+`
 const ProductLeft = styled.div`
-  width: 50%;
-  background-color:#F6F6F6;
+display: flex;
+align-items: center;
+  width: 60%;
+  
 `;
 const ImageContainer = styled.div`
   width: 520px;

@@ -1,0 +1,27 @@
+.arrow {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .arrow-up {
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .arrow-down {
+    bottom: -100 !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .slick-track {
+    opacity: 1;
+    transform: translate3d(0px, -126px, 0px);
+    height: 378px;
+    display: block;
+  }
+  .slick-list {
+    height: 500px !important;
+  }
+  
