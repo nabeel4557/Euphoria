@@ -30,14 +30,16 @@ function ProductView() {
     }
 
     return (
-        <Product className='product wrapper'>
-            <ProductContainer className='product-container'>
-                <ProductLeft className='left'>
+        <Product className='product '>
+            <ProductContainer className='product-container '>
+              
+                <ProductLeft className=' w-full h-full '>
                     <VerticalSlider />
                     <ImageContainer className='image-container'>
                         <Image src={product.image} alt={product.name} />
                     </ImageContainer>
                 </ProductLeft>
+                
                 <ProductRight className='right'>
                 <ShopDetails>
                     <Choice>Shop<IoIosArrowForward/></Choice>
@@ -128,11 +130,11 @@ const ProductContainer = styled.div`
     align-items: center;
 `
 const ProductLeft = styled.div`
-display: flex;
-align-items: center;
-  width: 60%;
-  
+  display: flex;
+  width: 60%; 
 `;
+
+
 const ImageContainer = styled.div`
   width: 520px;
   height: 785px;

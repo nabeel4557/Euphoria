@@ -4,7 +4,7 @@ import React from 'react'
 function ProductDiscribtion() {
   return (
     <>
-    <div>
+    <div className='wrapper'>
 
         <div className='w-full flex   justify-between py-10'>
             <div className='Describtion items-center w-1/2'>

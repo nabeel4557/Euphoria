@@ -33,12 +33,12 @@ const VerticalSlider = () => {
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />
   };
-
+  
   return (
-    <VerticalSlideDiv style={{ width: '300px', height: '500px', position: 'relative' }}>
-      <Slider {...settings}>
+    <VerticalSlideDiv style={{ padding:'20px',width:'full', height: '100%', position: 'relative',background:'#F6F6F6'}}  >
+      <Slider {...settings} className='my-0 mx-auto'>
         {product.gallery.map((img) => (
-          <ImageDiv key={img.id}>
+          <ImageDiv key={img.id} >
             <Img src={img.image} alt="Product" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </ImageDiv>
         ))}

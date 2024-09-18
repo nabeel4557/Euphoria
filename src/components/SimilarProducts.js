@@ -4,7 +4,7 @@ import limelight from '../limelight.json'
 
 function SimilarProducts() {
   return (
-    <div className=''>
+    <div className='wrapper'>
         <div className="flex items-center gap-x-4 mb-[50px]">
             <div className="bg-[#8A33FD] w-[6px] h-[30px]"></div>
             <h3 className="text-[28px] font-bold">Similar Products</h3>
