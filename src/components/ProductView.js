@@ -12,6 +12,7 @@ import { MdOutlineLocalShipping } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import VerticalSlider from './VerticalSlider';
 import ProductDiscribtion from './ProductDiscribtion';
+import SimilarProducts from './SimilarProducts';
 
 function ProductView() {
     const { id } = useParams();
@@ -109,6 +110,10 @@ function ProductView() {
 
             <div>
               <ProductDiscribtion/>
+            </div>
+
+            <div>
+              <SimilarProducts/>
             </div>
         </Product>
         
