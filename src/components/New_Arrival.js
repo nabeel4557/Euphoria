@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./New_Arrival.css";
+import { Link } from 'react-router-dom'
+
 
 import NextArrow from "../Arrows/NextArrow";
 import PrevArrow from "../Arrows/PrevArrow";
@@ -32,14 +34,17 @@ function New_Arrival() {
                 <div className="slider-wrapper mx-4 w-full">
                     <Slider ref={sliderRef} {...settings}>
                         {data.map((item) => (
-                            <div key={item.id}>
-                                <div className="image-container">
-                                    <img src={item.image} alt={item.name} />
+                            <Link to={`/products/${item.id}`}>
+                                <div key={item.id}>
+                                    <div className="image-container">
+                                        <img src={item.image} alt={item.name} />
+                                    </div>
+                                    <h2 className="ml-[25px] font-bold">
+                                        {item.name}
+                                    </h2>
                                 </div>
-                                <h2 className="ml-[25px] font-bold">
-                                    {item.name}
-                                </h2>
-                            </div>
+                            </Link>
+                            
                         ))}
                     </Slider>
                 </div>

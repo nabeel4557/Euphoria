@@ -5,7 +5,28 @@
         "name2":"Raven Hoodie With  Black colored Design",
         "image":"/assets/img-16.jpg",
         "brand":"Jhanvi’s  Brand",
-        "price":"$123.00"
+        "price":"$123.00",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/619XJPLabGL._SX679_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/31+SOe5CzGL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/71OpHm6apAL._SX679_.jpg"
+            }
+        ]
 
     },
     {
@@ -14,7 +35,28 @@
         "name2":"line Pattern Black Hoodies with Black color Design",
         "image":"/assets/img-17.jpg",
         "brand":"AS’s  Brand",
-        "price":"$37.00.00"
+        "price":"$37.00",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/71rmM69WmmL._SY741_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/81HF6HRfLWL._SY741_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/81HiTAhC+6L._SY741_.jpg"
+            }
+        ]
 
     },
     {
@@ -23,7 +65,28 @@
         "name2":"Black Shorts Basic Cotton Shorts",
         "image":"/assets/img-18.jpg",
         "brand":"MM’s  Brand",
-        "price":"$37.00"
+        "price":"$37.00",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/61yEaqO8aML._SX679_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/61GFgC5rCLL._SX679_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/71SNloZL2TL._SX679_.jpg"
+            }
+        ]
 
     },
     {
@@ -32,7 +95,28 @@
         "name2":"Levender Hoodie with Women Cotton Zipper Hoodie",
         "image":"/assets/img-19.jpg",
         "brand":"Nike’s  Brand",
-        "price":"$119.00"
+        "price":"$119.00",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/41intFteOGL.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/41LSVbHEedL.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/31XWW-crywL.jpg"
+            }
+        ]
 
     }
 ]

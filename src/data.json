@@ -2,26 +2,118 @@
     {
         "id":1,
         "name" :"Knitted Joggers",
+        "name2": "RynoGear Regular Fit Super Stretchable Track Pant for Men",
         "image": "/assets/img-1.jpg",
-        "category": "New Arrival"
+        "category": "New Arrival",
+        "brand": "Nike",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/31drg0SuyNL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/41LkCZE+giL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/41R5I6ko+7L._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
     },
     {
         "id":2,
         "name" :"Urban Shirts",
+        "name2": "Urban Sundari Comfortable and Stylish Printed Night Dress Half Sleeve with Shorts Set for Women",
         "image": "/assets/img-2.jpg",
-        "category": "New Arrival"
+        "category": "New Arrival",
+        "brand": "Addidas",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/31qrLsxnTcL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/417gXs50j-L._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/41EL6Uats2L._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
     },
     {
         "id":3,
         "name" :"Full Sleeve",
+        "name2": "DYCA Mens Black Round Neck Full Sleeves Tshirt",
         "image": "/assets/img-3.jpg",
-        "category": "New Arrival"
+        "category": "New Arrival",
+        "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/31ewYQ17EuL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/31FHXSbVMSL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/31HZAh7UutL._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
     },
     {
         "id":4,
         "name" :"Active T-Shirts",
+        "name2": "ATICX Men's Slim Fit Polyester Half Sleeve T Shirt - Quick Dry Lycra Sports Training Tee for Gym, Running, Workout",
         "image": "/assets/img-4.jpg",
-        "category": "New Arrival"
+        "category": "New Arrival",
+        "brand": "H&M",
+        "size" : [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "gallery": [
+            {
+                "id":1,
+                "Image": "https://m.media-amazon.com/images/I/31h5Cf8hgtL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":2,
+                "image":"https://m.media-amazon.com/images/I/31FM3tHikWL._SX38_SY50_CR,0,0,38,50_.jpg"
+            },
+            {
+                "id":3,
+                "image":"https://m.media-amazon.com/images/I/31SsSeSlq7L._SX38_SY50_CR,0,0,38,50_.jpg"
+            }
+        ]
     }
 
 
