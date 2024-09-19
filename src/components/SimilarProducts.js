@@ -28,10 +28,9 @@ function SimilarProducts() {
                         <h5 className=' text-[18px] font-bold'>{item.name}</h5>
                         <span className=' text-[14px] text-[#7F7F7F]'>Explore Now!</span>
                       </div>
-                      <div>
-                        <img src='../assets/Arrow.svg'/>
-                        
-
+                      <div className='bg-[#f6f6f6] py-1 px-2 rounded'>
+                        {/* <img src='../assets/Arrow.svg'/> */}
+                        <span>{item.price}</span>
                       </div>
                     </div>
                   </div>
