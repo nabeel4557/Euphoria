@@ -9,7 +9,7 @@ function NextArrow(props) {  // Added 'props' as a parameter
     className="Arrow PrevArrow"
     onClick={onClick}
   >
-    <HiOutlineArrowSmLeft size={20} color="#8A33FD" />
+    <HiOutlineArrowSmLeft size={20} color="#3C4242" />
   </div>
   );
 }

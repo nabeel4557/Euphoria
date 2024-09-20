@@ -14,7 +14,7 @@ function Limelight() {
                   <div className='mb-10'>
                     <div className='relative'>
                         <div className='w-full h-[393px]'>
-                            <img className='w-[100%] h-[100%]' src={item.image} alt={item.name}/>
+                            <img className='w-[100%] ' src={item.image} alt={item.name}/>
                         </div>
                         <div className=' z-1 bg-white rounded-[50%] absolute top-6 right-5 cursor-pointer'>
                                 <img src='/assets/wishlist.svg' alt="Wishlist"  className='p-2'/>
