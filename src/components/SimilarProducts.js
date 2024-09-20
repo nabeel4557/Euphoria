@@ -4,7 +4,7 @@ import limelight from '../limelight.json'
 
 function SimilarProducts() {
   return (
-    <div className=''>
+    <div className='wrapper'>
         <div className="flex items-center gap-x-4 mb-[50px]">
             <div className="bg-[#8A33FD] w-[6px] h-[30px]"></div>
             <h3 className="text-[28px] font-bold">Similar Products</h3>
@@ -28,10 +28,9 @@ function SimilarProducts() {
                         <h5 className=' text-[18px] font-bold'>{item.name}</h5>
                         <span className=' text-[14px] text-[#7F7F7F]'>Explore Now!</span>
                       </div>
-                      <div>
-                        <img src='../assets/Arrow.svg'/>
-                        
-
+                      <div className='bg-[#f6f6f6] py-1 px-2 rounded'>
+                        {/* <img src='../assets/Arrow.svg'/> */}
+                        <span>{item.price}</span>
                       </div>
                     </div>
                   </div>

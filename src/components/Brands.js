@@ -31,4 +31,5 @@ function Brands() {
     )
 }
 
+
 export default Brands

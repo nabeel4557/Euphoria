@@ -6,18 +6,19 @@ import { IoIosArrowDropup, IoIosArrowDropdown } from "react-icons/io";
 import './VerticalSlider.css'
 import styled from 'styled-components';
 
+
 const VerticalSlider = () => {
   const { id } = useParams();
   const product = Men.find((item) => item.id === parseInt(id));
 
   const CustomPrevArrow = ({ onClick }) => (
-    <div className="arrow arrow-up" onClick={onClick}>
+    <div className="arrow arrow-up" onClick={onClick} >
       <IoIosArrowDropup size={30} />
     </div>
   );
 
   const CustomNextArrow = ({ onClick }) => (
-    <div className="arrow arrow-down" onClick={onClick}>
+    <div className="arrow arrow-down" onClick={onClick} >
       <IoIosArrowDropdown size={30} />
     </div>
   );
@@ -33,12 +34,12 @@ const VerticalSlider = () => {
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />
   };
-
+  
   return (
-    <VerticalSlideDiv style={{ width: '300px', height: '500px', position: 'relative' }}>
-      <Slider {...settings}>
+    <VerticalSlideDiv style={{ padding:'20px',width:'full',background:'#F6F6F6',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}  >
+      <Slider {...settings} className='pl-90px'>
         {product.gallery.map((img) => (
-          <ImageDiv key={img.id}>
+          <ImageDiv key={img.id} className=''>
             <Img src={img.image} alt="Product" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </ImageDiv>
         ))}
@@ -46,9 +47,11 @@ const VerticalSlider = () => {
     </VerticalSlideDiv>
   );
 };
+
+
 const VerticalSlideDiv = styled.div`
-    width: 100px;
-    height: 100px;
+    width: 25%;
+
 `
 const ImageDiv = styled.div`
     width: 100%;
@@ -66,3 +69,4 @@ const Img = styled.img`
 
 
 export default VerticalSlider;
+

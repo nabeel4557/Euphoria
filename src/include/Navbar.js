@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <div className='font-causten py-8 sticky top-0 border-b border-[#BEBCBD] bg-white z-10'>
+        <div className='font-causten py-8 sticky top-0 bg-white z-10'>
             <div className="wrapper  flex justify-between items-center">
                 <div className='navleft cursor-pointer'>
                     <h1><Link to='/' ><img src='/assets/Logo.svg' alt="Logo" /> </Link></h1>

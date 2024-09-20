@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Men from '../men.json';
 import data from "../data.json";
@@ -17,111 +17,109 @@ import VerticalSlider from './VerticalSlider';
 import ProductDiscribtion from './ProductDiscribtion';
 import SimilarProducts from './SimilarProducts';
 
+
 function ProductView() {
-    const { id } = useParams();
-    const product = Men.find((item) => item.id === parseInt(id));
-  
+  const { id } = useParams();
+  const product = Men.find((item) => item.id === parseInt(id));
 
-    const [selectedSize, setSelectedSize] = useState(null);
-    const [selectedColor, setSelectedColor] = useState(null);
 
-    const handleSizeClick = (size) => {
-      setSelectedSize(size);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
 
-    };
-    const handleColorClick = (color) => {
-      setSelectedColor(color);
-    }
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
 
-    return (
-        <Product className='product wrapper'>
-            <ProductContainer className='product-container'>
-                <ProductLeft className='left'>
-                    <VerticalSlider />
-                    <ImageContainer className='image-container'>
-                        <Image src={product.image} alt={product.name} />
-                    </ImageContainer>
-                </ProductLeft>
-                <ProductRight className='right'>
-                <ShopDetails>
-                    <Choice>Shop<IoIosArrowForward/></Choice>
-                    <Choice>Women<IoIosArrowForward/></Choice>
-                    <Choice>Top</Choice>
-                </ShopDetails>
-                    <Details className='details'>
-                        <Heading>{product.name2}</Heading>
-                        <Rating className='rating'>
-                            <Star>
-                                <IoStar color={"#EDD146"} size={22}/>
-                                <IoStar color={"#EDD146"} size={22} />
-                                <IoStar color={"#EDD146"} size={22}/>
-                                <IoStarHalf color={"#EDD146"} size={22} />
-                                <IoStarOutline color={"#EDD146"} size={22}/>
-                                <RatingNamberDiv>
-                                <RatingNumber>3.5</RatingNumber>
-                                </RatingNamberDiv>
-                            </Star>
-                            <ComentDiv>
-                                <CommentIcon><BiCommentDetail size={21} color={"#807D7E;"}/></CommentIcon>
-                                <Comment>120 comment</Comment>
-                            </ComentDiv>
-                        </Rating>
-                        <SizeDiv>
-                        <Size>
-                            <SizeText>Select Size</SizeText>
-                            <SizeGuide>Size Guide <FaArrowRightLong/></SizeGuide>
-                        </Size>
+  };
+  const handleColorClick = (color) => {
+    setSelectedColor(color);
+  }
 
-                            <SelectSize>
-                                {product.size.map((size)=> (
-                                <SizeBox key={size} onClick={()=> handleSizeClick(size)} isSelected = {selectedSize === size}>
-                                    {size}
-                                </SizeBox>
-                                ))}
-                                
-                            </SelectSize>
-                        </SizeDiv>
-                        <ColorAvailable>
-                            <ColorHeading>Colours Available </ColorHeading>
-                            <ColorDiv>
-                                <Color style={{"background-color" : '#3C4242'}} isSelected={selectedColor === '#3C4242'} onClick={()=> handleColorClick('#3C4242')}></Color>
-                                <Color style={{"background-color" : '#EDD146'}} isSelected={selectedColor === '#EDD146'} onClick={()=> handleColorClick('#EDD146')}></Color>
-                                <Color style={{"background-color" : '#EB84B0'}} isSelected={selectedColor === '#EB84B0'} onClick={()=> handleColorClick('#EB84B0')}></Color>
-                                <Color style={{"background-color" : '#9C1F35'}} isSelected={selectedColor === '#9C1F35'} onClick={()=> handleColorClick('#9C1F35')}></Color>
-                            </ColorDiv>
-                        </ColorAvailable>
-                        <PriceDetails>
-                            <Button> <MdOutlineShoppingCart/> Add to cart</Button>
-                            <Price> {product.price}</Price>
-                        </PriceDetails>
-                        <DeliveryDetails>
-                            <LeftSide className='left'>
-                                <Delivery><DeliveryIcon><MdOutlinePayment/></DeliveryIcon>Secure payment</Delivery>
-                                <Delivery><DeliveryIcon><MdOutlineLocalShipping/></DeliveryIcon>Free shipping</Delivery>
-                            </LeftSide>
-                            <RightSide className='right'>
-                                <Delivery><DeliveryIcon><IoShirtOutline/></DeliveryIcon>Size & Fit</Delivery>
-                                <Delivery><DeliveryIcon><img src='/assets/Free-Shipping&Returns.svg'alt='return'/></DeliveryIcon>Free Shipping & Returns</Delivery>
-                            </RightSide>
-                        
-                        </DeliveryDetails>
-                    
-                    </Details>
-                </ProductRight>
+  return (
+    <Product className='product '>
+      <ProductContainer>
 
-            </ProductContainer>
-            
+        <ProductLeft className='h-full'>
+          <VerticalSlider />
+          <ImageContainer>
+            <Image src={product.image} alt={product.name} />
+          </ImageContainer>
+        </ProductLeft>
 
-            <div>
-              <ProductDiscribtion/>
-            </div>
+        <ProductRight className='w-[50%]'>
+          <ShopDetails>
+            <Choice>Shop<IoIosArrowForward /></Choice>
+            <Choice>Women<IoIosArrowForward /></Choice>
+            <Choice>Top</Choice>
+          </ShopDetails>
+          <Details className='details'>
+            <Heading>{product.name2}</Heading>
+            <Rating className='rating'>
+              <Star>
+                <IoStar color={"#EDD146"} size={22} />
+                <IoStar color={"#EDD146"} size={22} />
+                <IoStar color={"#EDD146"} size={22} />
+                <IoStarHalf color={"#EDD146"} size={22} />
+                <IoStarOutline color={"#EDD146"} size={22} />
+                <RatingNamberDiv>
+                  <RatingNumber>3.5</RatingNumber>
+                </RatingNamberDiv>
+              </Star>
+              <ComentDiv>
+                <CommentIcon><BiCommentDetail size={21} color={"#807D7E;"} /></CommentIcon>
+                <Comment>120 comment</Comment>
+              </ComentDiv>
+            </Rating>
+            <SizeDiv>
+              <Size>
+                <SizeText>Select Size</SizeText>
+                <SizeGuide>Size Guide <FaArrowRightLong /></SizeGuide>
+              </Size>
 
-            <div>
-              <SimilarProducts/>
-            </div>
-        </Product>
-        
-    );
+              <SelectSize>
+                {product.size.map((size) => (
+                  <SizeBox key={size} onClick={() => handleSizeClick(size)} isSelected={selectedSize === size}>
+                    {size}
+                  </SizeBox>
+                ))}
+
+              </SelectSize>
+            </SizeDiv>
+            <ColorAvailable>
+              <ColorHeading>Colours Available </ColorHeading>
+              <ColorDiv>
+                <Color style={{ "background-color": '#3C4242' }} isSelected={selectedColor === '#3C4242'} onClick={() => handleColorClick('#3C4242')}></Color>
+                <Color style={{ "background-color": '#EDD146' }} isSelected={selectedColor === '#EDD146'} onClick={() => handleColorClick('#EDD146')}></Color>
+                <Color style={{ "background-color": '#EB84B0' }} isSelected={selectedColor === '#EB84B0'} onClick={() => handleColorClick('#EB84B0')}></Color>
+                <Color style={{ "background-color": '#9C1F35' }} isSelected={selectedColor === '#9C1F35'} onClick={() => handleColorClick('#9C1F35')}></Color>
+              </ColorDiv>
+            </ColorAvailable>
+            <PriceDetails>
+              <Button> <MdOutlineShoppingCart /> Add to cart</Button>
+              <Price> {product.price}</Price>
+            </PriceDetails>
+            <DeliveryDetails>
+              <LeftSide className='left'>
+                <Delivery><DeliveryIcon><MdOutlinePayment /></DeliveryIcon>Secure payment</Delivery>
+                <Delivery><DeliveryIcon><MdOutlineLocalShipping /></DeliveryIcon>Free shipping</Delivery>
+              </LeftSide>
+              <RightSide className='right'>
+                <Delivery><DeliveryIcon><IoShirtOutline /></DeliveryIcon>Size & Fit</Delivery>
+                <Delivery><DeliveryIcon><img src='/assets/Free-Shipping&Returns.svg' alt='return' /></DeliveryIcon>Free Shipping & Returns</Delivery>
+              </RightSide>
+            </DeliveryDetails>
+          </Details>
+        </ProductRight>
+      </ProductContainer>
+      <div>
+        <ProductDiscribtion />
+      </div>
+
+      <div>
+        <SimilarProducts />
+      </div>
+    </Product>
+
+  );
 }
 
 const Product = styled.div`
@@ -129,22 +127,21 @@ const Product = styled.div`
 `;
 const ProductContainer = styled.div`
     display: flex;
-    align-items: center;
+    padding-bottom:20px;
+    gap:70px;
 `
 const ProductLeft = styled.div`
-display: flex;
-align-items: center;
-  width: 60%;
-  
+  display: flex;
+  width:60%;  
 `;
+
 const ImageContainer = styled.div`
-  width: 520px;
-  height: 785px;
+  width:75%;
+  
 `;
 const Image = styled.img`
   width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
+  display:block;
 `;
 const ProductRight = styled.div`
 
@@ -310,13 +307,13 @@ const DeliveryIcon = styled.span`
   align-items: center;
   justify-content: center;
  `
- const ShopDetails = styled.div`
+const ShopDetails = styled.div`
   display: flex;
   align-items: center;
   margin-top: 20px;
   margin-bottom:30px
  `
- const Choice = styled.span`
+const Choice = styled.span`
   display: flex;
   align-items: center;
   gap: 15px;
@@ -324,3 +321,9 @@ const DeliveryIcon = styled.span`
   color: #807D7E;
  `
 export default ProductView;
+
+
+
+
+  // width: 520px;
+  // height: 785px;
