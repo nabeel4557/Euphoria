@@ -122,9 +122,9 @@
   }
 }
 @media (max-width: 540px) {
-  .slick-slide img {
+  /* .slick-slide img {
     height: 300px;
-  }
+  } */
   .slider-container {
     margin-bottom: 30px;
   }
