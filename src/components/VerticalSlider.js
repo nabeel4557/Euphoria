@@ -21,6 +21,7 @@ const VerticalSlider = () => {
   const CustomNextArrow = ({ onClick }) => (
     <div className="arrow arrow-down" onClick={onClick} >
       <IoIosArrowDropdown size={20} />
+      
     </div>
   );
 
