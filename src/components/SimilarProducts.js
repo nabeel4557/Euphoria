@@ -29,8 +29,8 @@ function SimilarProducts() {
                         <span className=' text-[14px] text-[#7F7F7F]'>Explore Now!</span>
                       </div>
                       <div className='bg-[#f6f6f6] py-1 px-2 rounded'>
-                        {/* <img src='../assets/Arrow.svg'/> */}
-                        <span>{item.price}</span>
+                        <img src='../assets/Arrow.svg'/>
+                        {/* <span>{item.price}</span> */}
                       </div>
                     </div>
                   </div>

@@ -40,14 +40,14 @@ function Feedback() {
                 <h3 className='text-[28px] font-bold'>Feedback</h3>
             </div>
             <Slider {...settings}>
-                <div className='pr-5 h-[300px] max-[430px]:h-[370px]'>
+                <div className='pr-5 h-[300px] max-[430px]:h-[270px]'>
                     <div className=' border border-[#BEBCBD] p-6 rounded-lg h-full'>
                         <div className='flex justify-between'>
                             <div>
                                 <div className='w-[50px] h-[50px]'>
                                     <img src='/assets/span-1.svg' alt="User" className='w-full h-full'/>
                                 </div>
-                                <h4 className='text-[#3C4242] text-[22px] font-semibold mt-3 mb-5'>Floyd Miles</h4>
+                                <h4 className='text-[#3C4242] text-[22px] font-semibold mt-3 mb-5 max-[360px]:text-[15px]'>Floyd Miles</h4>
                             </div>
                             <div className='flex space-x-2 text-[#EDD146]'>
                                 <IoStar /><IoStar /><IoStar /><IoStarHalf /><IoStarOutline />
@@ -55,18 +55,18 @@ function Feedback() {
                         </div>
                         <div className='max-w-[95%]'>
                             <p className='text-[14px] text-[#807D7E] leading-[16px] font-normal'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p> 
-                            <p className='text-[14px] text-[#807D7E] font-normal leading-[16px]'>Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <p className='text-[14px] text-[#807D7E] font-normal leading-[16px] max-[480px]:hidden'>Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                         </div>
                     </div>
                 </div>
-                <div className='pr-5 h-[300px] max-[430px]:h-[370px]'>
+                <div className='pr-5 h-[300px] max-[430px]:h-[270px]'>
                     <div className=' border border-[#BEBCBD] p-6 rounded-lg h-full'>
                         <div className='flex justify-between'>
                             <div>
                                 <div className='w-[50px] h-[50px]'>
                                     <img src='/assets/span-2.svg' alt="User" className='w-full h-full'/>
                                 </div>
-                                <h4 className='text-[#3C4242] text-[22px] font-semibold mt-3 mb-5'>Ronald Richards</h4>
+                                <h4 className='text-[#3C4242] text-[22px] font-semibold mt-3 mb-5 max-[360px]:text-[15px]'>Ronald Richards</h4>
                             </div>
                             <div className='flex space-x-2 text-[#EDD146]'>
                                 <IoStar /><IoStar /><IoStar /><IoStar /><IoStarOutline />
@@ -77,14 +77,14 @@ function Feedback() {
                         </div>
                     </div>
                 </div>
-                <div className='pr-5 h-[300px] max-[430px]:h-[370px]'>
+                <div className='pr-5 h-[300px] max-[430px]:h-[270px]'>
                     <div className=' border border-[#BEBCBD] p-6 rounded-lg h-full'>
                         <div className='flex justify-between'>
                             <div>
                                 <div className='w-[50px] h-[50px]'>
                                     <img src='/assets/span-3.svg' alt="User" className='w-full h-full'/>
                                 </div>
-                                <h4 className='text-[#3C4242] text-[22px] font-semibold mt-3 mb-5'>Savannah Nguyen</h4>
+                                <h4 className='text-[#3C4242] text-[22px] font-semibold mt-3 mb-5 max-[360px]:text-[15px]'>Savannah Nguyen</h4>
                             </div>
                             <div className='flex space-x-2 text-[#EDD146]'>
                                 <IoStar /><IoStar /><IoStar /><IoStarHalf /><IoStarOutline />
@@ -92,7 +92,7 @@ function Feedback() {
                         </div>
                         <div className='max-w-[95%]'>
                             <p className='text-[14px] text-[#807D7E] leading-[16px] font-normal'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p> 
-                            <p className='text-[14px] text-[#807D7E] font-normal leading-[16px]'>Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <p className='text-[14px] text-[#807D7E] font-normal leading-[16px] max-[480px]:hidden'>Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                         </div>
                     </div>
                 </div>
