@@ -13,7 +13,7 @@ import { MdOutlinePayment } from "react-icons/md";
 import { IoShirtOutline } from "react-icons/io5";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
-import VerticalSlider from './VerticalSlider';
+// import VerticalSlider from './VerticalSlider';
 import ProductDiscribtion from './ProductDiscribtion';
 import SimilarProducts from './SimilarProducts';
 
@@ -36,16 +36,18 @@ function ProductView() {
 
   return (
     <Product className='product '>
-      <ProductContainer>
+      <ProductContainer className='wrapper'>
 
-        <ProductLeft className='h-full'>
-          <VerticalSlider />
+        <ProductLeft >
+          <VerticalSliderDiv >
+            {/* <VerticalSlider /> */}
+          </VerticalSliderDiv>
           <ImageContainer>
             <Image src={product.image} alt={product.name} />
           </ImageContainer>
         </ProductLeft>
 
-        <ProductRight className='w-[50%]'>
+        <ProductRight >
           <ShopDetails>
             <Choice>Shop<IoIosArrowForward /></Choice>
             <Choice>Women<IoIosArrowForward /></Choice>
@@ -55,17 +57,17 @@ function ProductView() {
             <Heading>{product.name2}</Heading>
             <Rating className='rating'>
               <Star>
-                <IoStar color={"#EDD146"} size={22} />
-                <IoStar color={"#EDD146"} size={22} />
-                <IoStar color={"#EDD146"} size={22} />
-                <IoStarHalf color={"#EDD146"} size={22} />
-                <IoStarOutline color={"#EDD146"} size={22} />
-                <RatingNamberDiv>
+                <StarIconFull color={"#EDD146"} size={22} />
+                <StarIconFull color={"#EDD146"} size={22} />
+                <StarIconFull color={"#EDD146"} size={22} />
+                <StarIconHalf color={"#EDD146"} size={22} />
+                <StarIconoutline color={"#EDD146"} size={22} />
+              </Star>
+              <RatingNamberDiv>
                   <RatingNumber>3.5</RatingNumber>
                 </RatingNamberDiv>
-              </Star>
               <ComentDiv>
-                <CommentIcon><BiCommentDetail size={21} color={"#807D7E;"} /></CommentIcon>
+                <CommentIcon><BiCommentDetail size={22} color={"#807D7E;"} /></CommentIcon>
                 <Comment>120 comment</Comment>
               </ComentDiv>
             </Rating>
@@ -97,7 +99,9 @@ function ProductView() {
               <Button> <MdOutlineShoppingCart /> Add to cart</Button>
               <Price> {product.price}</Price>
             </PriceDetails>
-            <DeliveryDetails>
+            
+          </Details>
+          <DeliveryDetails>
               <LeftSide className='left'>
                 <Delivery><DeliveryIcon><MdOutlinePayment /></DeliveryIcon>Secure payment</Delivery>
                 <Delivery><DeliveryIcon><MdOutlineLocalShipping /></DeliveryIcon>Free shipping</Delivery>
@@ -107,7 +111,6 @@ function ProductView() {
                 <Delivery><DeliveryIcon><img src='/assets/Free-Shipping&Returns.svg' alt='return' /></DeliveryIcon>Free Shipping & Returns</Delivery>
               </RightSide>
             </DeliveryDetails>
-          </Details>
         </ProductRight>
       </ProductContainer>
       <div>
@@ -128,42 +131,99 @@ const Product = styled.div`
 const ProductContainer = styled.div`
     display: flex;
     padding-bottom:20px;
-    gap:70px;
+    gap:50px;
+    height: 769px;
+
 `
 const ProductLeft = styled.div`
   display: flex;
-  width:60%;  
+  width:65%;
+  gap:30px ;
 `;
+const VerticalSliderDiv = styled.div`
+  width: 10%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+
+  @media (max-width: 1280px) {
+    margin-top:100px
+  }
+`
 
 const ImageContainer = styled.div`
-  width:75%;
+  width: 535px;
+
+  @media (max-width: 1280px) {
+    width: 450px;
+  }
   
 `;
 const Image = styled.img`
   width: 100% !important;
-  display:block;
+  height: 100% !important;
 `;
 const ProductRight = styled.div`
-
+  width: 100%;
 `;
+const ShopDetails = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom:30px
+ `
+const Choice = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #807D7E;
+
+  @media (max-width: 1280px) {
+    font-size: 15px;
+  }
+ `
 const Details = styled.div`
-  width: 550px;
+
 `
 const Heading = styled.h1`
   font-weight: 700;
   font-size: 30px;
+
+  @media (max-width: 1280px) {
+    font-size: 25px;
+  }
 `
 const Rating = styled.div`
   display: flex;
   align-items: center;
-  gap: 50px;
+  /* gap: 50px; */
   margin-top: 30px
 `;
 const Star = styled.span`
   display: flex;
   align-items: center;
   gap:10px;
+
+  @media (max-width: 1280px) {
+    
+  }
 `
+const StarIconFull = styled(IoStar)`
+  color: #EDD146;
+  size: 22px;
+  `
+  const StarIconHalf = styled(IoStarHalf)`
+  color: #EDD146;
+  size: 22px;
+  `
+  const StarIconoutline = styled(IoStarOutline)`
+  color: #EDD146;
+  size: 22px;
+  `
+
+
 const RatingNamberDiv = styled.div`
   margin-left:10px;
 `
@@ -175,6 +235,7 @@ const ComentDiv = styled.div`
   display: flex;
   align-items:center;
   gap: 7px;
+  margin-left: 40px;
 `
 const Comment = styled.span`
   font-size: 17px;
@@ -223,6 +284,12 @@ const SizeBox = styled.span`
   cursor: pointer;
   background-color: ${({ isSelected }) => (isSelected ? ' #3C4242' : 'white')};
   color: ${({ isSelected }) => (isSelected ? 'white' : '#3C4242')};
+
+  @media (max-width: 1280px) {
+    width: 35px;
+    height: 35px;
+    font-size: 13px;
+  }
   
 `
 const ColorAvailable = styled.div`
@@ -247,6 +314,11 @@ const Color = styled.div`
   padding: ${({ isSelected }) => (isSelected ? '2px' : '0')};
   background-color: ${({ color }) => color}; 
   box-sizing: border-box;
+
+  @media (max-width: 1280px) {
+    width: 20px;
+    height: 20px;
+  }
 `
 const PriceDetails = styled.div`
   display: flex;
@@ -307,19 +379,8 @@ const DeliveryIcon = styled.span`
   align-items: center;
   justify-content: center;
  `
-const ShopDetails = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom:30px
- `
-const Choice = styled.span`
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 18px;
-  color: #807D7E;
- `
+
+
 export default ProductView;
 
 

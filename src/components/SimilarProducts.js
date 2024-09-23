@@ -10,25 +10,25 @@ function SimilarProducts() {
             <h3 className="text-[28px] font-bold">Similar Products</h3>
         </div>
 
-        <div className='grid grid-cols-4 w-full space-x-6'>
+        <div className='grid grid-cols-4 w-full max-[768px]:grid-cols-2 max-[480px]:grid-cols-1 '>
               {limelight.map((item)=> (
                   <div className='mb-10'>
-                    <div className='relative'>
-                        <div className='w-full h-[393px]'>
+                    <div className='relative w-[271px] h-[393px] max-[1280px]:w-[260px] max-[1280px]:h-[375px] max-[1080px]:w-[200px] max-[1080px]:h-[300px] max-[980px]:w-[150px] max-[980px]:h-[200px] max-[768px]:w-[250px] max-[768px]:h-[300px] max-[640px]:w-[200px] max-[480px]:w-full max-[480px]:h-[457px]'>
+                        <div className='w-full h-full'>
                             <img className='w-[100%] h-[100%]' src={item.image} alt={item.name}/>
                         </div>
-                        <div className=' z-1 bg-white rounded-[50%] absolute top-6 right-5 cursor-pointer'>
+                        <div className=' z-1o bg-white rounded-[50%] absolute top-6 right-5 cursor-pointer'>
                                 <img src='/assets/wishlist.svg' alt="Wishlist"  className='p-2'/>
                             </div>
 
                     </div>
 
-                    <div className='flex justify-between items-center w-[271px]'>
-                      <div>
-                        <h5 className=' text-[18px] font-bold'>{item.name}</h5>
-                        <span className=' text-[14px] text-[#7F7F7F]'>Explore Now!</span>
+                    <div className='flex justify-between items-center w-[271px] max-[1280px]:w-[260px] max-[1080px]:w-[200px] max-[980px]:w-[150px] max-[768px]:w-[250px] max-[640px]:w-[200px] max-[480px]:w-full'>
+                      <div className='mt-[20px]'>
+                        <h5 className='  text-[18px] font-bold max-[1080px]:text-[15px] max-[980px]:text-[11px] max-[768px]:text-[16px]'>{item.name}</h5>
+                        <span className=' text-[14px] max-[980px]:text-[11px] max-[768px]:text-[14px] text-[#7F7F7F]'>Explore Now!</span>
                       </div>
-                      <div className='bg-[#f6f6f6] py-1 px-2 rounded'>
+                      <div className=''>
                         <img src='../assets/Arrow.svg'/>
                         {/* <span>{item.price}</span> */}
                       </div>

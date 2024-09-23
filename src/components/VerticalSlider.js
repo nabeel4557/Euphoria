@@ -51,8 +51,14 @@ const VerticalSlider = () => {
           </ImageDiv>
         ))}
       </Slider>
-      <PrevArrow onClick={() => sliderRef.current.slickPrev()}/>
-      <NextArrow onClick={() => sliderRef.current.slickNext()}/>
+      <div>
+        <div>
+            <PrevArrow onClick={() => sliderRef.current.slickPrev()}/>
+        </div>
+        <div>
+          <NextArrow onClick={() => sliderRef.current.slickNext()}/>
+        </div>
+      </div>
     </VerticalSlideDiv>
   );
 };
@@ -60,6 +66,7 @@ const VerticalSlider = () => {
 
 const VerticalSlideDiv = styled.div`
     width: 25%;
+    /* position: relative; */
 
 `
 const ImageDiv = styled.div`
@@ -73,6 +80,9 @@ const Img = styled.img`
     background-repeat:no-repeat;
     margin: 0 auto;
     background-size:cover;
+`
+const SliderIcon = styled.div`
+  /* position: absolute; */
 `
 
 

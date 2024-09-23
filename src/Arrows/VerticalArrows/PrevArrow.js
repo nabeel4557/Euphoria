@@ -1,9 +1,9 @@
 import React from 'react'
 import { MdKeyboardArrowUp } from "react-icons/md";
 
-function PrevArrow({onclick}) {
+function PrevArrow({onClick}) {
   return (
-    <div onClick={onclick}>
+    <div onClick={onClick}>
         <MdKeyboardArrowUp size={20}/>
 
     </div>
