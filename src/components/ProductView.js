@@ -62,10 +62,11 @@ function ProductView() {
                 <StarIconFull color={"#EDD146"} size={22} />
                 <StarIconHalf color={"#EDD146"} size={22} />
                 <StarIconoutline color={"#EDD146"} size={22} />
-              </Star>
-              <RatingNamberDiv>
+                <RatingNamberDiv>
                   <RatingNumber>3.5</RatingNumber>
                 </RatingNamberDiv>
+              </Star>
+              
               <ComentDiv>
                 <CommentIcon><BiCommentDetail size={22} color={"#807D7E;"} /></CommentIcon>
                 <Comment>120 comment</Comment>
@@ -127,7 +128,7 @@ function ProductView() {
 
 const Product = styled.div`
   width: 100%;
-  
+
 `;
 const ProductContainer = styled.div`
     display: flex;
@@ -154,6 +155,9 @@ const ProductLeft = styled.div`
         
     
   }
+  @media (max-width: 540px) {
+    width: 100%;
+  }
 `;
 const VerticalSliderDiv = styled.div`
   width: 10%;
@@ -164,6 +168,9 @@ const VerticalSliderDiv = styled.div`
 
   @media (max-width: 1280px) {
     margin-top:100px
+  }
+  @media (max-width: 1280px) {
+    width: 15%;
   }
 `
 
@@ -176,11 +183,22 @@ const ImageContainer = styled.div`
   @media (max-width: 1080px) {
     width: 380px;
   }
+  @media (max-width: 980px) {
+    width: 100%;
+  }
+  @media (max-width: 540px) {
+    width: 400px
+  }
   
 `;
 const Image = styled.img`
   width: 100% !important;
   height: 100% !important;
+
+  @media (max-width: 540px) {
+    
+  }
+
 `;
 const ProductRight = styled.div`
   width: 100%;
@@ -221,7 +239,11 @@ const Rating = styled.div`
   display: flex;
   align-items: center;
   /* gap: 50px; */
-  margin-top: 30px
+  margin-top: 30px;
+
+  @media (max-width: 480px) {
+    display: block;
+  }
 `;
 const Star = styled.span`
   display: flex;
@@ -258,6 +280,12 @@ const ComentDiv = styled.div`
   align-items:center;
   gap: 7px;
   margin-left: 40px;
+
+  @media (max-width: 480px) {
+    margin-left: 0px;
+    margin-top: 15px;
+    
+  }
 `
 const Comment = styled.span`
   font-size: 17px;
@@ -387,6 +415,15 @@ const DeliveryDetails = styled.div`
         margin-top: 0px;
     
   }
+  @media (max-width: 980px) {
+        justify-content: left;
+    
+  }
+  @media (max-width: 480px) {
+        display: block;
+    
+  }
+  
 
 `
 const LeftSide = styled.div`
