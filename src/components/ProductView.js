@@ -133,12 +133,26 @@ const ProductContainer = styled.div`
     padding-bottom:20px;
     gap:50px;
     height: 769px;
+    @media (max-width: 1080px) {
+        height: 700px;
+    
+    }
+    @media (max-width: 980px) {
+        display: block;
+        height: 100%;
+    
+    }
 
 `
 const ProductLeft = styled.div`
   display: flex;
   width:65%;
   gap:30px ;
+
+  @media (max-width: 1080px) {
+        
+    
+  }
 `;
 const VerticalSliderDiv = styled.div`
   width: 10%;
@@ -158,6 +172,9 @@ const ImageContainer = styled.div`
   @media (max-width: 1280px) {
     width: 450px;
   }
+  @media (max-width: 1080px) {
+    width: 380px;
+  }
   
 `;
 const Image = styled.img`
@@ -166,6 +183,10 @@ const Image = styled.img`
 `;
 const ProductRight = styled.div`
   width: 100%;
+  @media (max-width: 1080px) {
+        height: 700px;
+    
+  }
 `;
 const ShopDetails = styled.div`
   display: flex;
@@ -336,21 +357,36 @@ const Button = styled.button`
  display: flex;
  align-items: center;
  gap: 10px;
- font-size:18px
+ font-size:18px;
+
+ @media (max-width: 1280px) {
+    padding: 12px 30px 12px 30px;
+    font-size: 14px;
+  }
 `
 const Price = styled.div`
   border: 1px solid #3C4242;
   padding: 12px 40px 12px 40px;
   border-radius: 8px;
   font-weight:700;
-  font-size:18px
+  font-size:18px;
+
+  @media (max-width: 1280px) {
+    font-size: 14px;
+    padding: 12px 30px 12px 30px;
+  }
 `
 const DeliveryDetails = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
-  
+
+  @media (max-width: 1080px) {
+        margin-top: 0px;
+    
+  }
+
 `
 const LeftSide = styled.div`
   width: 50%;
@@ -364,6 +400,10 @@ const Delivery = styled.div`
   color: #3C4242;
   font-weight:500;
   margin-top: 20px;
+
+  @media (max-width: 1280px) {
+    font-size: 14px;
+  }
   
 `
 const RightSide = styled.div`
@@ -378,6 +418,11 @@ const DeliveryIcon = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1280px) {
+    width: 30px;
+    height: 30px;
+  }
  `
 
 
