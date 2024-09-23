@@ -127,6 +127,7 @@ function ProductView() {
 
 const Product = styled.div`
   width: 100%;
+  
 `;
 const ProductContainer = styled.div`
     display: flex;
