@@ -206,6 +206,10 @@ const ProductRight = styled.div`
         height: 700px;
     
   }
+  @media (max-width: 980px) {
+        height: 100%;
+    
+  }
 `;
 const ShopDetails = styled.div`
   display: flex;
@@ -233,6 +237,9 @@ const Heading = styled.h1`
 
   @media (max-width: 1280px) {
     font-size: 25px;
+  }
+  @media (max-width: 640px) {
+    font-size: 20px;
   }
 `
 const Rating = styled.div`
@@ -428,6 +435,10 @@ const DeliveryDetails = styled.div`
 `
 const LeftSide = styled.div`
   width: 50%;
+  @media (max-width: 480px) {
+        width: 100%;
+    
+  }
 `
 const Delivery = styled.div`
   height: 44px;
@@ -445,6 +456,10 @@ const Delivery = styled.div`
   
 `
 const RightSide = styled.div`
+@media (max-width: 480px) {
+        width: 100%;
+    
+  }
 `
 const DeliveryIcon = styled.span`
   border-radius: 50%;

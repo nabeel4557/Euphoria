@@ -7,7 +7,7 @@ function SimilarProducts() {
     <div className='wrapper'>
         <div className="flex items-center gap-x-4 mb-[50px]">
             <div className="bg-[#8A33FD] w-[6px] h-[30px]"></div>
-            <h3 className="text-[28px] font-bold">Similar Products</h3>
+            <h3 className="text-[28px] font-bold max-[480px]:text-[23px]">Similar Products</h3>
         </div>
 
         <div className='grid grid-cols-4 w-full max-[768px]:grid-cols-2 max-[480px]:grid-cols-1 '>
