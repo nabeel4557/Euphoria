@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Men from '../men.json';
-import data from "../data.json";
-import women from '../women.json'
+import Data from "../data.json";
+import Women from '../women.json'
 
 import { IoStar, IoStarHalf, IoStarOutline } from "react-icons/io5";
 import styled from 'styled-components';
@@ -21,7 +21,6 @@ import SimilarProducts from './SimilarProducts';
 function ProductView() {
   const { id } = useParams();
   const product = Men.find((item) => item.id === parseInt(id));
-
 
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
@@ -504,3 +503,5 @@ export default ProductView;
 
   // width: 520px;
   // height: 785px;
+
+
