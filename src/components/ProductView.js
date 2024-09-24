@@ -17,7 +17,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import ProductDiscribtion from './ProductDiscribtion';
 import SimilarProducts from './SimilarProducts';
 
-// svg
+
 import PrevArrow from '../Arrows/VerticalArrows/PrevArrow';
 import NextArrow from '../Arrows/VerticalArrows/NextArrow';
 
@@ -51,7 +51,7 @@ function ProductView() {
 
             <VerticalSliderDiv >
 
-                <VerticalSlideDiv style={{  width:'full',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}  >
+                <VerticalSlideDiv style={{  width:'full',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',height:'400px', top:0}}  >
                     
                     {product.gallery.map((img,index) => (
                         <ImageDiv  key={img.id} 
@@ -218,15 +218,16 @@ const ProductContainer = styled.div`
     height: 769px;
 
     @media (max-width: 1280px) {
-        height: 700px;
+        height: 100%;
     
     }
     @media (max-width: 1080px) {
-        height: 700px;
+        height: 100%px;
+        display: block;
+
     
     }
     @media (max-width: 980px) {
-        display: block;
         height: 100%;
     
     }
@@ -236,6 +237,11 @@ const ProductLeft = styled.div`
   display: flex;
   width:65%;
   /* gap:30px ; */
+  @media (max-width: 1080px) {
+        width: 100%;
+        height: 100%;
+    
+    }
 
   @media (max-width: 980px) {
         width: 100%;
@@ -255,10 +261,10 @@ const ProductLeft = styled.div`
 `;
 const VerticalSliderDiv = styled.div`
   width: 15%;
-  height: 300px;
+  /* height: 300px; */
   display: flex;
   align-items: center;
-  margin-top: 150px;
+  /* margin-top: 150px; */
   margin-right: 40px;
 
   @media (max-width: 640px) {
@@ -268,17 +274,18 @@ const VerticalSliderDiv = styled.div`
   
 
   @media (max-width: 1280px) {
-    margin-top:140px;
     width: 15%;
+    
 
   }
-  @media (max-width: 980px) {
-      height: 300px;
-    
-  }
+ 
   @media (max-width: 768px) {
       height: auto;
-      margin-top:0px
+    
+  }
+  @media (max-width: 480px) {
+    display: none;
+
     
   }
   
@@ -293,10 +300,10 @@ const ImageContainer = styled.div`
 
   @media (max-width: 1280px) {
     width: 450px;
-    height: 600px;
+    height: 700px;
   }
   @media (max-width: 1080px) {
-    width: 380px;
+    width: 600px;
   }
   @media (max-width: 980px) {
     width: 600px;

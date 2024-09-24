@@ -20,8 +20,8 @@ function Mens() {
                     </div>
                     <div className='flex justify-between items-center w-[271px] max-[1280px]:w-[260px] max-[1080px]:w-[200px] max-[980px]:w-[150px] max-[768px]:w-[250px] max-[640px]:w-[200px] max-[480px]:w-full'>
                       <div className='mt-[20px]'>
-                        <h5 className=' text-[18px] font-bold max-[1080px]:text-[15px] max-[980px]:text-[11px] max-[768px]:text-[16px]'>{item.name}</h5>
-                        <span className=' text-[14px] max-[980px]:text-[11px] max-[768px]:text-[14px] text-[#7F7F7F]'>Explore Now!</span>
+                        <h5 className=' text-[18px] font-bold max-[1080px]:text-[15px] max-[980px]:text-[11px] max-[768px]:text-[14px]'>{item.name}</h5>
+                        <span className=' text-[14px] max-[980px]:text-[11px] max-[768px]:text-[13px] text-[#7F7F7F]'>Explore Now!</span>
                       </div>
                       <div>
                         <img src='./assets/Arrow.svg'/>
