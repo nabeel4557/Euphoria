@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Men from '../men.json';
-import Data from "../data.json";
-import Women from '../women.json'
+import data from "../data.json";
+import women from '../women.json'
 
 import { IoStar, IoStarHalf, IoStarOutline } from "react-icons/io5";
 import styled from 'styled-components';
@@ -13,14 +13,20 @@ import { MdOutlinePayment } from "react-icons/md";
 import { IoShirtOutline } from "react-icons/io5";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
-import VerticalSlider from './VerticalSlider';
+// import VerticalSlider from './VerticalSlider';
 import ProductDiscribtion from './ProductDiscribtion';
 import SimilarProducts from './SimilarProducts';
 
+// svg
+import PrevArrow from '../Arrows/VerticalArrows/PrevArrow';
+import NextArrow from '../Arrows/VerticalArrows/NextArrow';
 
 function ProductView() {
   const { id } = useParams();
   const product = Men.find((item) => item.id === parseInt(id));
+
+  const [currentImage, setCurrentImage] = useState(1)
+
 
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
@@ -39,11 +45,37 @@ function ProductView() {
       <ProductContainer className='wrapper'>
 
         <ProductLeft >
-          <VerticalSliderDiv >
+          {/* <VerticalSliderDiv >
              <VerticalSlider /> 
-          </VerticalSliderDiv>
+          </VerticalSliderDiv> */}
+
+            <VerticalSliderDiv >
+
+                <VerticalSlideDiv style={{  width:'full',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}  >
+                    
+                    {product.gallery.map((img,index) => (
+                        <ImageDiv  key={img.id} 
+                        style={{ 
+                        marginTop: '30px', 
+                        border: currentImage === index ? '1px solid #000' : 'none' 
+                        }} >
+                        <Img src={img.image} alt="Product" style={{ width: '100%', height: '100%'  }} />
+                        </ImageDiv>
+                    ))}
+                    
+                    <Arrows>
+                    <PrevArrowDiv onClick={()=>setCurrentImage( currentImage != 0 ? currentImage-1 : 0)} >
+                        <PrevArrow />
+                    </PrevArrowDiv>
+                    <NextArrowDiv onClick={()=>setCurrentImage( currentImage != product.gallery.length-1 ? currentImage+1 : product.gallery.length-1)} >
+                        <NextArrow />
+                    </NextArrowDiv>
+                    </Arrows>
+                </VerticalSlideDiv>
+            </VerticalSliderDiv> 
+
           <ImageContainer>
-            <Image src={product.image} alt={product.name} />
+            <Image src={product.gallery[currentImage].image} alt={product.name} />
           </ImageContainer>
         </ProductLeft>
 
@@ -126,6 +158,55 @@ function ProductView() {
   );
 }
 
+const VerticalSlideDiv = styled.div`
+`
+const ImageDiv = styled.div`
+    width: 100%;
+    height: 100%;
+    width: 75px !important;
+    height: 75px !important;
+    
+    border-radius: 10px;
+    padding: 3px;
+`
+const Img = styled.img`
+    width: 100%;
+    background-repeat:no-repeat;
+    margin: 0 auto;
+    background-size:cover;
+    border-radius: 10px;
+`
+
+const Arrows = styled.div`
+  margin-top: 30px;
+
+`
+const PrevArrowDiv = styled.button`
+  background: #F6F6F6;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  margin-bottom:15px;
+  display: block;
+
+  &:hover {
+    background: #3C4242;
+    color: #fff;
+  }
+  
+`
+const NextArrowDiv = styled.button`
+  background: #F6F6F6;
+  border-radius: 50%;
+  width: 21.17px;
+  height: 21.17px;
+
+  &:hover {
+    background: #3C4242;
+    color: #fff;
+  }
+`
+
 const Product = styled.div`
   width: 100%;
 
@@ -135,6 +216,11 @@ const ProductContainer = styled.div`
     padding-bottom:20px;
     gap:50px;
     height: 769px;
+
+    @media (max-width: 1280px) {
+        height: 700px;
+    
+    }
     @media (max-width: 1080px) {
         height: 700px;
     
@@ -150,6 +236,12 @@ const ProductLeft = styled.div`
   display: flex;
   width:65%;
   /* gap:30px ; */
+
+  @media (max-width: 980px) {
+        width: 100%;
+        height: 100%;
+    
+    }
   
   
 
@@ -168,6 +260,11 @@ const VerticalSliderDiv = styled.div`
   align-items: center;
   margin-top: 150px;
   margin-right: 40px;
+
+  @media (max-width: 640px) {
+        height: 300px;
+    
+    }
   
 
   @media (max-width: 1280px) {
@@ -189,18 +286,26 @@ const VerticalSliderDiv = styled.div`
 
 const ImageContainer = styled.div`
   width: 535px;
+  @media (max-width: 1500px) {
+    height: 749px;
+  }
+ 
 
   @media (max-width: 1280px) {
     width: 450px;
+    height: 600px;
   }
   @media (max-width: 1080px) {
     width: 380px;
   }
   @media (max-width: 980px) {
-    width: 100%;
+    width: 600px;
+    height:100%
   }
   @media (max-width: 540px) {
-    width: 400px
+    width: 100%;
+    height: 400px;
+    
   }
   
 `;
@@ -228,7 +333,13 @@ const ShopDetails = styled.div`
   display: flex;
   align-items: center;
   margin-top: 20px;
-  margin-bottom:30px
+  margin-bottom:30px;
+
+  @media (max-width: 1280px) {
+    margin-bottom: 10px;
+        
+    
+    }
  `
 const Choice = styled.span`
   display: flex;
@@ -264,6 +375,10 @@ const Rating = styled.div`
   @media (max-width: 480px) {
     display: block;
   }
+  @media (max-width: 1280px) {
+        margin-top: 10px;
+    
+    }
 `;
 const Star = styled.span`
   display: flex;
@@ -316,6 +431,11 @@ const CommentIcon = styled.span`
 `
 const SizeDiv = styled.div`
   margin-top:25px;
+
+  @media (max-width: 1280px) {
+        margin-top: 15px;
+    
+    }
 `
 const Size = styled.div`
   display: flex;
@@ -341,6 +461,11 @@ const SelectSize = styled.div`
   align-items: center;
   gap: 22px;
 
+  @media (max-width: 1280px) {
+        margin-top: 15px;
+    
+    }
+
 `;
 const SizeBox = styled.span`
   display: flex;
@@ -364,6 +489,11 @@ const SizeBox = styled.span`
 `
 const ColorAvailable = styled.div`
   margin-top: 30px;
+
+  @media (max-width: 1280px) {
+        margin-top: 15px;
+    
+    }
 `
 const ColorHeading = styled.h5`
 font-weight:bold;
@@ -374,6 +504,11 @@ const ColorDiv = styled.div`
   align-items: center;
   margin-top: 20px;
   gap: 20px;
+
+  @media (max-width: 1280px) {
+        margin-top: 15px;
+    
+    }
 `
 const Color = styled.div`
   width: 30px;
@@ -396,7 +531,13 @@ const PriceDetails = styled.div`
   margin-top: 30px;
   gap: 20px;
   border-bottom:1px solid #BEBCBD;
-  padding-bottom:40px
+  padding-bottom:40px;
+
+  @media (max-width: 1280px) {
+        margin-top: 20px;
+        padding-bottom:20px
+    
+    }
 `
 const Button = styled.button`
  border-radius: 8px;
@@ -502,6 +643,4 @@ export default ProductView;
 
 
   // width: 520px;
-  // height: 785px;
-
-
+  // height: 785px;

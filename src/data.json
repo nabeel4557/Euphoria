@@ -16,7 +16,7 @@
         "gallery": [
             {
                 "id":1,
-                "Image": "https://m.media-amazon.com/images/I/31drg0SuyNL._SX38_SY50_CR,0,0,38,50_.jpg"
+                "image": "https://m.media-amazon.com/images/I/31drg0SuyNL._SX38_SY50_CR,0,0,38,50_.jpg"
             },
             {
                 "id":2,
@@ -45,7 +45,7 @@
         "gallery": [
             {
                 "id":1,
-                "Image": "https://m.media-amazon.com/images/I/31qrLsxnTcL._SX38_SY50_CR,0,0,38,50_.jpg"
+                "image": "https://m.media-amazon.com/images/I/31qrLsxnTcL._SX38_SY50_CR,0,0,38,50_.jpg"
             },
             {
                 "id":2,
@@ -74,7 +74,7 @@
         "gallery": [
             {
                 "id":1,
-                "Image": "https://m.media-amazon.com/images/I/31ewYQ17EuL._SX38_SY50_CR,0,0,38,50_.jpg"
+                "image": "https://m.media-amazon.com/images/I/31ewYQ17EuL._SX38_SY50_CR,0,0,38,50_.jpg"
             },
             {
                 "id":2,
@@ -103,7 +103,7 @@
         "gallery": [
             {
                 "id":1,
-                "Image": "https://m.media-amazon.com/images/I/31h5Cf8hgtL._SX38_SY50_CR,0,0,38,50_.jpg"
+                "image": "https://m.media-amazon.com/images/I/31h5Cf8hgtL._SX38_SY50_CR,0,0,38,50_.jpg"
             },
             {
                 "id":2,
