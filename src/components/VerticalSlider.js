@@ -1,5 +1,5 @@
 import React,{useRef} from 'react';
-import Slider from 'react-slick';
+// import Slider from 'react-slick';
 import Men from '../men.json';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -29,44 +29,37 @@ const VerticalSlider = () => {
   //   </div>
   // );
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    arrows: false,
-    // prevArrow: <CustomPrevArrow />,
-    // nextArrow: <CustomNextArrow />
-  };
+  
   
   return (
-    <VerticalSlideDiv style={{ padding:'20px', width:'full',background:'#F6F6F6',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}  >
-      <Slider ref={sliderRef} {...settings} style={{ paddingLeft:"80px"}}>
+    <VerticalSlideDiv style={{  width:'full',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}  >
+      
         {product.gallery.map((img) => (
-          <ImageDiv key={img.id} >
+          <ImageDiv key={img.id} style={{ marginTop: '30px'}} >
             <Img src={img.image} alt="Product" style={{ width: '100%', height: '100%', objectFit: 'cover',  }} />
           </ImageDiv>
         ))}
-      </Slider>
-      <div>
-        <div>
+      
+      <Arrows>
+        <PrevArrowDiv>
             <PrevArrow onClick={() => sliderRef.current.slickPrev()}/>
-        </div>
-        <div>
+        </PrevArrowDiv>
+        <NextArrowDiv>
           <NextArrow onClick={() => sliderRef.current.slickNext()}/>
-        </div>
-      </div>
+        </NextArrowDiv>
+      </Arrows>
     </VerticalSlideDiv>
   );
 };
 
 
 const VerticalSlideDiv = styled.div`
-    width: 25%;
+    /* width: 25%; */
     /* position: relative; */
+
+   
+   
+  
 
 `
 const ImageDiv = styled.div`
@@ -74,15 +67,47 @@ const ImageDiv = styled.div`
     height: 100%;
     width: 75px !important;
     height: 75px !important;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 3px;
 `
 const Img = styled.img`
     width: 100%;
     background-repeat:no-repeat;
     margin: 0 auto;
     background-size:cover;
+    border-radius: 10px;
 `
 const SliderIcon = styled.div`
   /* position: absolute; */
+`
+const Arrows = styled.div`
+  margin-top: 30px;
+
+`
+const PrevArrowDiv = styled.div`
+  background: #F6F6F6;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  margin-bottom:15px;
+
+  &:hover {
+    background: #3C4242;
+    color: #fff;
+  }
+  
+`
+const NextArrowDiv = styled.div`
+  background: #F6F6F6;
+  border-radius: 50%;
+  width: 21.17px;
+  height: 21.17px;
+
+  &:hover {
+    background: #3C4242;
+    color: #fff;
+  }
 `
 
 

@@ -13,7 +13,7 @@ import { MdOutlinePayment } from "react-icons/md";
 import { IoShirtOutline } from "react-icons/io5";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
-// import VerticalSlider from './VerticalSlider';
+import VerticalSlider from './VerticalSlider';
 import ProductDiscribtion from './ProductDiscribtion';
 import SimilarProducts from './SimilarProducts';
 
@@ -36,11 +36,12 @@ function ProductView() {
 
   return (
     <Product className='product '>
+        
       <ProductContainer className='wrapper'>
 
         <ProductLeft >
           <VerticalSliderDiv >
-            {/* <VerticalSlider /> */}
+             <VerticalSlider /> 
           </VerticalSliderDiv>
           <ImageContainer>
             <Image src={product.image} alt={product.name} />
@@ -149,10 +150,12 @@ const ProductContainer = styled.div`
 const ProductLeft = styled.div`
   display: flex;
   width:65%;
-  gap:30px ;
+  /* gap:30px ; */
+  
+  
 
-  @media (max-width: 1080px) {
-        
+  @media (max-width: 980px) {
+        margin-bottom: 50px;
     
   }
   @media (max-width: 540px) {
@@ -160,18 +163,29 @@ const ProductLeft = styled.div`
   }
 `;
 const VerticalSliderDiv = styled.div`
-  width: 10%;
+  width: 15%;
   height: 300px;
   display: flex;
   align-items: center;
   margin-top: 150px;
+  margin-right: 40px;
+  
 
   @media (max-width: 1280px) {
-    margin-top:100px
-  }
-  @media (max-width: 1280px) {
+    margin-top:140px;
     width: 15%;
+
   }
+  @media (max-width: 980px) {
+      height: 300px;
+    
+  }
+  @media (max-width: 768px) {
+      height: auto;
+      margin-top:0px
+    
+  }
+  
 `
 
 const ImageContainer = styled.div`
@@ -416,10 +430,14 @@ const DeliveryDetails = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 10px;
 
   @media (max-width: 1080px) {
         margin-top: 0px;
+    
+  }
+  @media (max-width: 1480px) {
+        justify-content: left;
     
   }
   @media (max-width: 980px) {
