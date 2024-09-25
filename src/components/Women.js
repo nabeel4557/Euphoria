@@ -13,7 +13,7 @@ function Women() {
       </div>
             <div className='grid grid-cols-4 w-full max-[768px]:grid-cols-2 max-[480px]:grid-cols-1'>
               {women.map((item)=> (
-                <Link to={`/products/${item.id}`}>
+                <Link to={`/products/${item.id}?category=women`}>
                     <div className='mb-10 '>
                         <div className='w-[271px] h-[393px] max-[1280px]:w-[260px] max-[1280px]:h-[375px] max-[1080px]:w-[200px] max-[1080px]:h-[300px] max-[980px]:w-[150px] max-[980px]:h-[200px] max-[768px]:w-[250px] max-[768px]:h-[300px] max-[640px]:w-[200px] max-[480px]:w-full max-[480px]:h-full'>
                         <img className='w-[100%] h-[100%]' src={item.image} alt={item.name}/>

@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useParams,useLocation } from 'react-router-dom'
 import Men from '../men.json';
 import data from "../data.json";
 import women from '../women.json'
+import limelight from '../limelight.json'
+
 
 import { IoStar, IoStarHalf, IoStarOutline } from "react-icons/io5";
 import styled from 'styled-components';
@@ -23,7 +25,19 @@ import NextArrow from '../Arrows/VerticalArrows/NextArrow';
 
 function ProductView() {
   const { id } = useParams();
-  const product = Men.find((item) => item.id === parseInt(id));
+  
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const category = params.get('category');
+
+  const  product =  category == 'Men' ?  Men.find((item) => item.id === parseInt(id))  : category == 'women' ?   women.find((item) => item.id === parseInt(id))  :   limelight.find((item) => item.id === parseInt(id)) 
+
+
+  console.log(category,'mennnnnn')
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
 
   const [currentImage, setCurrentImage] = useState(1)
 
@@ -312,6 +326,14 @@ const ImageContainer = styled.div`
   @media (max-width: 540px) {
     width: 100%;
     height: 400px;
+    
+  }
+  @media (max-width: 480px) {
+    height: 350px;
+    
+  }
+  @media (max-width: 360px) {
+    height: 300px;
     
   }
   
