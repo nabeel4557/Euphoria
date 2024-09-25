@@ -300,10 +300,10 @@ const ImageContainer = styled.div`
 
   @media (max-width: 1280px) {
     width: 450px;
-    height: 700px;
+    height: 500px;
   }
   @media (max-width: 1080px) {
-    width: 600px;
+    width: 500px;
   }
   @media (max-width: 980px) {
     width: 600px;
