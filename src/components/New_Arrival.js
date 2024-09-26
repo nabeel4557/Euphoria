@@ -70,7 +70,7 @@ function New_Arrival() {
                 <div className="slider-wrapper mx-4 w-full  ">
                     <Slider ref={sliderRef} {...settings}>
                         {data.map((item) => (
-                            <Link to={`/products/${item.id}`}>
+                            <Link to={`/products/${item.id}?category=data`}>
                                 <div className=".slick-slide " key={item.id }>
                                     <div className="image-container ">
                                         <img src={item.image} alt={item.name} />

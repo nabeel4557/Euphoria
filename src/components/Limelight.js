@@ -25,16 +25,13 @@ function Limelight() {
                         </div>
 
                         <div className='flex justify-between items-center w-[271px] max-[1280px]:w-[260px] max-[1080px]:w-[200px] max-[980px]:w-[150px] max-[768px]:w-[250px] max-[640px]:w-[200px] max-[640px]:block max-[1080px]:block max-[480px]:w-full'>
-                            <div className='mt-[20px]'>
+                            <div className='mt-[20px] '>
                                 <h5 className=' text-[15px] font-bold max-[1080px]:text-[15px] max-[980px]:text-[11px] max-[768px]:text-[14px]'>{item.name}</h5>
                                 <span className='text-[14px] max-[980px]:text-[11px] max-[768px]:text-[13px] text-[#7F7F7F]'>Explore Now!</span>
                             </div>
-                            <div className='bg-[#F6F6F6] p-2 rounded-[5px] max-[640px]:w-[70px] max-[1080px]:w-[70px]'>
+                            <div className='bg-[#F6F6F6] p-2 rounded-[5px] max-[1080px]:mt-[10px] max-[640px]:w-[70px] max-[1080px]:w-[70px] '>
                                 {/* <img src='./assets/Arrow.svg'/> */}
                                 <span className='font-bold text-[14px]'>{item.price}</span>
-
-                                
-
                             </div>
                         </div>
                     </div>

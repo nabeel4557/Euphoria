@@ -30,7 +30,7 @@ function ProductView() {
   const params = new URLSearchParams(location.search);
   const category = params.get('category');
 
-  const  product =  category == 'Men' ?  Men.find((item) => item.id === parseInt(id))  : category == 'women' ?   women.find((item) => item.id === parseInt(id))  :   limelight.find((item) => item.id === parseInt(id)) 
+  const  product =  category == 'Men' ?  Men.find((item) => item.id === parseInt(id))  : category == 'women' ?   women.find((item) => item.id === parseInt(id))  : category == 'data' ?   data.find((item) => item.id === parseInt(id)) : category == 'similarproduct' ?  limelight.find((item) => item.id === parseInt(id)) : limelight.find((item) => item.id === parseInt(id)) 
 
 
   console.log(category,'mennnnnn')
@@ -545,13 +545,14 @@ const Color = styled.div`
   border-radius: 50%;
   border: ${({ isSelected }) => (isSelected ? '2px solid #000' : 'none')}; 
   cursor: pointer;
-  padding: ${({ isSelected }) => (isSelected ? '2px' : '0')};
   background-color: ${({ color }) => color}; 
   box-sizing: border-box;
 
+  
+
   @media (max-width: 1280px) {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
   }
 `
 const PriceDetails = styled.div`
